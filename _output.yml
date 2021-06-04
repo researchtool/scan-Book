@@ -1,3 +1,16 @@
+bookdown::bs4_book:
+  theme:
+    primary: "#544154"
+    base_font: !expr bslib::font_google("Roboto")
+    code_font: !expr bslib::font_google("Roboto Mono")
+    heading_font: !expr bslib::font_google("Roboto", wght = 700)
+    headings-font-weight: "700"
+    lead-font-weight: "700"
+  repo: https://github.com/jazznbass/scan-Book
+  includes:
+    in_header: [ga_script.html]
+  css: style.css
+
 bookdown::gitbook:
   includes:
     in_header: [ga_script.html]
@@ -8,4 +21,10 @@ bookdown::gitbook:
         Analyzing single-case data with R and scan
        after: |
         Published with bookdown
-
+        
+bookdown::pdf_book:
+  keep_tex: yes
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib

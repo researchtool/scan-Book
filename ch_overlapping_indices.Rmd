@@ -70,7 +70,7 @@ pet(exampleAB)
 ```
 
 
-```{r echo = FALSE, fig.width = 4, fig.height = 3,fig.cap = "Illustration of PET. PET is 66.7% as 10 out of 15 datapoints of phase B are higher than the median of phase A."}
+```{r echo = FALSE, fig.width = 4, fig.height = 3,fig.cap = "Illustration of PET. PET is 66.7% as 10 out of 15 datapoints of phase B are higher than the projected trend-line of phase A."}
 dat <- rSC(design_rSC(1, phase.design = list(A = 10, B = 15), level = 0.4),round = 0, seed = 9871, random.names = "female")
 plot(dat, style = "grid",lines = c("trendA", col = "red", lwd = 3))
 ```
@@ -128,6 +128,8 @@ tau_u(exampleAB)
 ```{r results='asis', echo=FALSE}
 function_structure("rci")
 ```
+
+Basically, the reliable change index (rci) depicts if a post-test is above a pre-test value. Based on the reliability of the measurements and the standard-deviation the standard error is calculated. The mean difference between phase-A and phase-B is divided by the standard-error. Several authors proposed refined methods for calculating the rci. 
 
 The `rci` function computes three indices of reliable change [@wise_methods_2004] and corresponding descriptive statistics.
 

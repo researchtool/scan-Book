@@ -27,7 +27,7 @@ out <- tribble(
   "trend", "Slope of a regression line through values by time."
 )
 
-print_table(out, "Statistics of the describeSC command")
+print_table(out, "Statistics of the describe command")
 
 ```
 
